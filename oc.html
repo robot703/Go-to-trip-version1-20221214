@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .row {
+  box-sizing: bordor-box;
+ width: 300px;
+ height: 940px;
+ overflow: auto;
+}
+  .row::-webkit-scrollbar {
+    width: 5px;
+  }
+  .row::-webkit-scrollbar-thumb {
+    background-color: #53f84d96;
+  }
+  .row::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 25%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 92%;
+  font-size: 18px;
+  padding: 11px;
+  font-family: 'Jua', sans-serif;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -15px;
+  background-color: #FEFBF3;
+}
+
+#myMenu li a {
+width: 92%;
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-family: 'Jua', sans-serif;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #90f08c96;
+}
+
+
+.show {display: block;}
+      .Eu{
+        top: 50px;
+        left: 400px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(22% 86%, 25% 90%, 25% 90%, 29% 89%, 29% 89%, 32% 86%, 32% 86%, 33% 82%, 33% 82%, 35% 80%, 35% 80%, 37% 82%, 37% 82%, 37% 85%, 37% 85%, 39% 86%, 39% 86%, 42% 88%, 42% 88%, 46% 88%, 46% 88%, 51% 92%, 51% 92%, 55% 92%, 55% 92%, 57% 87%, 57% 87%, 57% 81%, 57% 81%, 65% 81%, 65% 81%, 75% 82%, 75% 82%, 77% 76%, 77% 76%, 88% 71%, 88% 71%, 93% 50%, 93% 50%, 91% 31%, 91% 31%, 93% 18%, 93% 18%, 89% 10%, 89% 10%, 70% 29%, 70% 29%, 55% 10%, 55% 10%, 42% 8%, 42% 8%, 37% 14%, 37% 14%, 46% 34%, 46% 34%, 23% 42%, 23% 42%, 18% 36%, 18% 36%, 7% 37%, 7% 37%, 11% 52%, 11% 52%, 19% 64%, 19% 64%, 19% 76%, 19% 76%);
+        z-index: 3;
+      }
+      .Eu:hover{
+        transform: scale(1.1);
+        
+      }
+      .Africa{
+        top: 325px;
+        left: 342px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(28% 19%, 24% 26%, 23% 38%, 28% 47%, 41% 49%, 43% 60%, 49% 89%, 60% 88%, 72% 80%, 75% 69%, 76% 50%, 77% 38%, 72% 32%, 68% 31%, 61% 16%, 52% 14%, 37% 10%, 32% 12%);
+        z-index: 2;
+      }
+      .Africa:hover{
+        transform: scale(1.1);
+      }
+      .Asia{
+        top: 8px;
+        left: 600px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(41% 19%, 45% 9%, 61% 13%, 88% 23%, 92% 31%, 81% 42%, 71% 51%, 60% 67%, 61% 75%, 55% 91%, 34% 79%, 25% 78%, 16% 73%, 12% 63%, 10% 53%, 20% 49%, 27% 44%, 29% 23%);
+        z-index: 1;
+      }
+      .Asia:hover{
+        transform: scale(1.1);
+      }
+      .Na{
+        top: 50px;
+        left: 1300px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(29% 46%, 39% 65%, 46% 82%, 53% 93%, 70% 100%, 73% 95%, 82% 85%, 73% 77%, 91% 59%, 90% 38%, 79% 19%, 85% 0, 68% 0, 58% 3%, 39% 14%, 34% 22%, 14% 21%, 7% 34%, 14% 50%);
+      }
+      .Na:hover{
+        transform: scale(1.1);
+      }
+      .Sa{
+        top: 475px;
+        left: 1548px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(38% 8%, 42% 10%, 47% 9%, 49% 13%, 54% 16%, 57% 20%, 58% 23%, 63% 25%, 67% 26%, 70% 29%, 70% 32%, 67% 38%, 66% 45%, 64% 49%, 61% 50%, 59% 51%, 59% 55%, 57% 58%, 50% 69%, 47% 71%, 45% 72%, 42% 88%, 44% 92%, 41% 92%, 37% 91%, 36% 84%, 37% 65%, 40% 45%, 34% 38%, 30% 27%, 34% 11%);
+      }
+      .Sa:hover{
+        transform: scale(1.1);
+      }
+      .Oc{
+        top: 525px;
+        left: 970px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(33% 7%, 48% 13%, 51% 16%, 57% 14%, 58% 18%, 54% 20%, 56% 25%, 48% 26%, 60% 52%, 52% 73%, 70% 39%, 74% 43%, 54% 68%, 80% 72%, 79% 61%, 89% 68%, 84% 78%, 83% 88%, 72% 94%, 72% 71%, 49% 81%, 46% 72%, 32% 60%, 14% 65%, 11% 42%, 34% 24%);
+      }
+      .Oc:hover{
+        transform: scale(1.1);
+      }
+
+      h2 {
+        margin-top: -15px;
+        margin-bottom: -15px;
+        padding: 20px 0px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Arial Black", sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .s1 {
+        background-color: #53f84d96;
+        color: #ffffff;
+        text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -3px 20px rgba(255,255,255,0.4);
+      }
+
+      .modal_wrap{ 
+        display: none;
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        top:200px;
+        left: 650px;
+        background:#FEFBF3;
+        z-index: 200;
+    }
+    .black_bg{
+        display: none;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #FEFBF3;
+        opacity:0.3;
+        top:0;
+        left: 0;
+    }
+    .modal_close{
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 0;
+        right: -300px;
+    }
+    .modal_close> a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background:url(https://img.icons8.com/metro/26/000000/close-window.png);
+        
+    }
+    </style>
+</head>
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2 class="s1">Oceania Country</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a id="modal_btn" href="#">호주<br><img src="오세아니아/AU.gif" width="150" height="90"></a></li>
+      <li><a href="#">피지<br><img src="오세아니아/FJ.gif" width="150" height="90"></a></li>
+      <li><a href="#">마셸제도<br><img src="오세아니아/MH.gif" width="150" height="90"></a></li>
+      <li><a href="#">나우루<br><img src="오세아니아/NR.gif" width="150" height="90"></a></li>
+      <li><a href="#">뉴질랜드<br><img src="오세아니아/NZ.gif" width="150" height="90"></a></li>
+      <li><a href="#">팔라우<br><img src="오세아니아/PW.gif" width="150" height="90"></a></li>
+      <li><a href="#">파푸아뉴기니<br><img src="오세아니아/PG.gif" width="150" height="90"></a></li>
+      <li><a href="#">솔로몬제도<br><img src="오세아니아/SB.gif" width="150" height="90"></a></li>
+      <li><a href="#">통가<br><img src="오세아니아/TO.gif" width="150" height="90"></a></li>
+      <li><a href="#">투발루<br><img src="오세아니아/TV.gif" width="150" height="90"></a></li>
+      <li><a href="#">바누아투<br><img src="오세아니아/VU.gif" width="150" height="90"></a></li>
+
+    </ul>
+  </div>
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+window.onload = function() {
+ 
+ function onClick() {
+     document.querySelector('.modal_wrap').style.display ='block';
+     document.querySelector('.black_bg').style.display ='block';
+ }   
+ function offClick() {
+     document.querySelector('.modal_wrap').style.display ='none';
+     document.querySelector('.black_bg').style.display ='none';
+ }
+
+ document.getElementById('modal_btn').addEventListener('click', onClick);
+ document.querySelector('.modal_close').addEventListener('click', offClick);
+};
+
+  </script>
+<body style="background-color:transparent">
+  <button type="button" onclick="location.href='eu.html' "class="Eu" ><img src="EU.png" width="500" height="380"></button>
+  <button type="button" onclick="location.href='africa.html' "class="Africa" ><img src="AFRICA.png" width="591" height="443"></button>
+  <button type="button" onclick="location.href='asia.html' "class="Asia" ><img src="ASIA.png" width="800" height="650"></button>
+  <button type="button" onclick="location.href='na.html' "class="Na" ><img src="NA.png" width="600" height="480"></button>
+  <button type="button" onclick="location.href='sa.html' " class="Sa" ><img src="SA.png" width="500" height="380"></button>
+  <button type="button" class="Oc" ><img src="OC.png" width="400" height="280"></button>
+
+  <div class="black_bg"></div>
+  <div class="modal_wrap">
+      <div class="modal_close"><a href="#"></a></div>
+      <div><img src="au.gif" width="800" height="500"></div>
+  </div>
+
+   
+</body>
+</html>

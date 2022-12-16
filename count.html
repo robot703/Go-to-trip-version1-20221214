@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /*popup*/
+.popup_layer {position:absolute;top:0;left:0;z-index: 10; width: 100%; height: 100%; background-color: #fffcf4;}
+/*팝업 박스*/
+.popup_box{position: absolute;top: 250px; left: 1000px; overflow: auto; height: 800px; width:500px;transform:translate(-230px, -100px);z-index:1002;box-sizing:border-box;background:rgb(255, 255, 255);box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.35);-webkit-box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.35);-moz-box-shadow: 2px 5px 10px 0px rgba(0,0,0,0.35);}
+/*컨텐츠 영역*/
+.popup_box .popup_cont {margin-left: 100px; line-height:1.4rem;font-size:20px; }
+.popup_box .popup_cont h2 {color:rgb(51, 51, 51);margin:0;}
+.button{
+    border: 0;
+}
+</style>
+    </head>
+    <a href="javascript:openPop()">
+      <div>
+          <button class="button"><img src="button.png" width="100" height="80"></button>
+      </div>
+  </a>
+  <div class="popup_layer" id="popup_layer" style="display: none;">
+    <div class="popup_box">
+        <div style="height: 10px; width: 375px; float: top;">
+          <a href="javascript:closePop();"><img src="ic_close.svg" class="m_header-banner-close" width="30px" height="30px"></a>
+        </div>
+        <!--팝업 컨텐츠 영역-->
+        <div class="popup_cont">
+          <br><h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              [TRAVEL CHECKLIST]</h5>
+            <form action='a.jsp'>
+              <span style="background-color:#e9ef83">기본 준비물</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span style="background-color:#e9ef83">여행 관련</span><br>
+              <input type='checkbox' name='default' value='passport' />여권
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='travel' value='copypassport' />가이드북<br>
+              <input type='checkbox' name='default' value='copypassport' />여권사본
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='travel' value='passportticket' />일기장<br>
+              <input type='checkbox' name='default' value='passportticket' />항공권
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='travel' value='money' />지도<br>
+              <input type='checkbox' name='default' value='money' />현지 화폐
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='travel' value='InternationalID' />수첩<br>
+              <input type='checkbox' name='default' value='InternationalID' />국제학생
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='travel' value='railpass' />필기구<br>
+              <input type='checkbox' name='default' value='railpass' />레일패스
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='travel' value='roomticket' />동전지갑<br>
+              <input type='checkbox' name='default' value='roomticket' />숙소 예약증
+              <br><br>
+              
+              <span style="background-color:#e9ef83">생활 관련</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span style="background-color:#e9ef83">의류 관련</span><br>
+              <input type='checkbox' name='life' value='tissue' />티슈
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='life' value='watertissue' />양말<br>
+              <input type='checkbox' name='life' value='watertissue' />물티슈
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='life' value='blindfold' />속옷<br>
+              <input type='checkbox' name='life' value='blindfold' />안대
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='life' value='umbrella' />티셔츠<br>
+              <input type='checkbox' name='life' value='umbrella' />우산
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='life' value='ziperbag' />바지<br>
+              <input type='checkbox' name='life' value='ziperbag' />지퍼백
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='life' value='tissue' />슬리퍼<br>
+              <input type='checkbox' name='life' value='mask' />마스크&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='life' value='mask' />바람막이<br>
+              <br>
+
+              <span style="background-color:#e9ef83">세안 관련</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <span style="background-color:#e9ef83">의약 관련</span><br>
+              <input type='checkbox' name='wash' value='tissue' />칫솔,치약
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='wash' value='tissue' />감기약<br>
+              <input type='checkbox' name='wash' value='watertissue' />샴푸,린스
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='wash' value='watertissue' />모기약<br>
+              <input type='checkbox' name='wash' value='blindfold' />폼클렌징
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='wash' value='blindfold' />연고,파스<br>
+              <input type='checkbox' name='wash' value='umbrella' />바디워시
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='wash' value='umbrella' />밴드<br>
+              <input type='checkbox' name='wash' value='ziperbag' />면도기
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='wash' value='ziperbag' />소화제<br>
+              <input type='checkbox' name='wash' value='mask' />스킨,로션
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='wash' value='mask' />두통약<br>
+              <input type='checkbox' name='wash' value='ziperbag' />화장품
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type='checkbox' name='wash' value='mask' />수건타월<br>
+              <input type='checkbox' name='wash' value='ziperbag' />손수건<br>
+              <input type='checkbox' name='wash' value='mask' />렌즈관련<br>
+              <input type='checkbox' name='wash' value='ziperbag' />여성용품<br>
+
+              <br>
+            </form>
+  
+        
+            
+
+    </div>
+  </div>
+  <script>
+    function openPop() {
+    document.getElementById("popup_layer").style.display = "block";
+
+}
+
+//팝업 닫기
+function closePop() {
+    document.getElementById("popup_layer").style.display = "none";
+}
+</script>
+</html>

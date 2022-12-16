@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  .row {
+  box-sizing: bordor-box;
+ width: 300px;
+ height: 940px;
+ overflow: auto;
+}
+  .row::-webkit-scrollbar {
+    width: 5px;
+  }
+  .row::-webkit-scrollbar-thumb {
+    background-color: #c267ff9c;
+  }
+  .row::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 25%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 92%;
+  font-size: 18px;
+  margin-bottom: -15px;
+  padding: 11px;
+  font-family: 'Jua', sans-serif;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -15px;
+  background-color: #FEFBF3;
+}
+
+#myMenu li a {
+width: 92%;
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Jua', sans-serif;
+  font-size: 20px;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #dba6ff9c;
+}
+
+      .Eu{
+        top: 50px;
+        left: 400px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(22% 86%, 25% 90%, 25% 90%, 29% 89%, 29% 89%, 32% 86%, 32% 86%, 33% 82%, 33% 82%, 35% 80%, 35% 80%, 37% 82%, 37% 82%, 37% 85%, 37% 85%, 39% 86%, 39% 86%, 42% 88%, 42% 88%, 46% 88%, 46% 88%, 51% 92%, 51% 92%, 55% 92%, 55% 92%, 57% 87%, 57% 87%, 57% 81%, 57% 81%, 65% 81%, 65% 81%, 75% 82%, 75% 82%, 77% 76%, 77% 76%, 88% 71%, 88% 71%, 93% 50%, 93% 50%, 91% 31%, 91% 31%, 93% 18%, 93% 18%, 89% 10%, 89% 10%, 70% 29%, 70% 29%, 55% 10%, 55% 10%, 42% 8%, 42% 8%, 37% 14%, 37% 14%, 46% 34%, 46% 34%, 23% 42%, 23% 42%, 18% 36%, 18% 36%, 7% 37%, 7% 37%, 11% 52%, 11% 52%, 19% 64%, 19% 64%, 19% 76%, 19% 76%);
+        z-index: 3;
+      }
+      .Eu:hover{
+        transform: scale(1.1);
+        
+      }
+      .Africa{
+        top: 325px;
+        left: 342px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(28% 19%, 24% 26%, 23% 38%, 28% 47%, 41% 49%, 43% 60%, 49% 89%, 60% 88%, 72% 80%, 75% 69%, 76% 50%, 77% 38%, 72% 32%, 68% 31%, 61% 16%, 52% 14%, 37% 10%, 32% 12%);
+        z-index: 2;
+      }
+      .Africa:hover{
+        transform: scale(1.1);
+      }
+      .Asia{
+        top: 8px;
+        left: 600px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(41% 19%, 45% 9%, 61% 13%, 88% 23%, 92% 31%, 81% 42%, 71% 51%, 60% 67%, 61% 75%, 55% 91%, 34% 79%, 25% 78%, 16% 73%, 12% 63%, 10% 53%, 20% 49%, 27% 44%, 29% 23%);
+        z-index: 1;
+      }
+      .Asia:hover{
+        transform: scale(1.1);
+      }
+      .Na{
+        top: 50px;
+        left: 1300px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(29% 46%, 39% 65%, 46% 82%, 53% 93%, 70% 100%, 73% 95%, 82% 85%, 73% 77%, 91% 59%, 90% 38%, 79% 19%, 85% 0, 68% 0, 58% 3%, 39% 14%, 34% 22%, 14% 21%, 7% 34%, 14% 50%);
+      }
+      .Na:hover{
+        transform: scale(1.1);
+      }
+      .Sa{
+        top: 475px;
+        left: 1548px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(38% 8%, 42% 10%, 47% 9%, 49% 13%, 54% 16%, 57% 20%, 58% 23%, 63% 25%, 67% 26%, 70% 29%, 70% 32%, 67% 38%, 66% 45%, 64% 49%, 61% 50%, 59% 51%, 59% 55%, 57% 58%, 50% 69%, 47% 71%, 45% 72%, 42% 88%, 44% 92%, 41% 92%, 37% 91%, 36% 84%, 37% 65%, 40% 45%, 34% 38%, 30% 27%, 34% 11%);
+      }
+      .Sa:hover{
+        transform: scale(1.1);
+      }
+      .Oc{
+        top: 525px;
+        left: 970px;
+        background-color:transparent;
+        border: 0;
+        outline: 0;
+        position: absolute;
+        clip-path: polygon(33% 7%, 48% 13%, 51% 16%, 57% 14%, 58% 18%, 54% 20%, 56% 25%, 48% 26%, 60% 52%, 52% 73%, 70% 39%, 74% 43%, 54% 68%, 80% 72%, 79% 61%, 89% 68%, 84% 78%, 83% 88%, 72% 94%, 72% 71%, 49% 81%, 46% 72%, 32% 60%, 14% 65%, 11% 42%, 34% 24%);
+      }
+      .Oc:hover{
+        transform: scale(1.1);
+      }
+      h2 {
+        margin-top: -15px;
+        margin-bottom: 0px;
+        padding: 20px 0px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: "Arial Black", sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .s1 {
+        background-color: #c267ff9c;
+        color: #ffffff;
+        text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -3px 20px rgba(255,255,255,0.4);
+      }
+
+      .modal_wrap{ 
+        display: none;
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        top:200px;
+        left: 650px;
+        background:#FEFBF3;
+        z-index: 200;
+    }
+    .black_bg{
+        display: none;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: #FEFBF3;
+        opacity:0.3;
+        top:0;
+        left: 0;
+    }
+    .modal_close{
+        width: 26px;
+        height: 26px;
+        position: absolute;
+        top: 0;
+        right: -300px;
+    }
+    .modal_close> a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background:url(https://img.icons8.com/metro/26/000000/close-window.png);
+        
+    }
+    </style>
+</head>
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2 class="s1">Africa Country</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="#">가나<br><img src="아프리카/GH.gif" width="150" height="90"></a></li>
+      <li><a href="#">가봉<br><img src="아프리카/GA.gif" width="150" height="90"></a></li>
+      <li><a href="#">감비아<br><img src="아프리카/GM.gif" width="150" height="90"></a></li>
+      <li><a href="#">기니<br><img src="아프리카/GN.gif" width="150" height="90"></a></li>
+      <li><a href="#">기니비사우<br><img src="아프리카/GW.gif" width="150" height="90"></a></li>
+      <li><a href="#">나미비아<br><img src="아프리카/NA.gif" width="150" height="90"></a></li>
+      <li><a href="#">나이지리아<br><img src="아프리카/NG.gif" width="150" height="90"></a></li>
+      <li><a href="#">남수단<br><img src="아프리카/SS.gif" width="150" height="90"></a></li>
+      <li><a href="#">남아프리카<br><img src="아프리카/ZA.gif" width="150" height="90"></a></li>
+      <li><a href="#">니제르<br><img src="아프리카/NE.gif" width="150" height="90"></a></li>
+      <li><a href="#">라이베리아<br><img src="아프리카/LR.gif" width="150" height="90"></a></li>
+      <li><a href="#">레소토<br><img src="아프리카/LS.gif" width="150" height="90"></a></li>
+      <li><a href="#">르완다<br><img src="아프리카/RW.gif" width="150" height="90"></a></li>
+      <li><a href="#">마다가스카르<br><img src="아프리카/MG.gif" width="150" height="90"></a></li>
+      <li><a href="#">말라위<br><img src="아프리카/MW.gif" width="150" height="90"></a></li>
+      <li><a href="#">말리<br><img src="아프리카/ML.gif" width="150" height="90"></a></li>
+      <li><a href="#">모리셔스<br><img src="아프리카/MU.gif" width="150" height="90"></a></li>
+      <li><a href="#">모잠비크<br><img src="아프리카/MZ.gif" width="150" height="90"></a></li>
+      <li><a href="#">베냉<br><img src="아프리카/BJ.gif" width="150" height="90"></a></li>
+      <li><a href="#">보츠와나<br><img src="아프리카/BW.gif" width="150" height="90"></a></li>
+      <li><a href="#">부룬디<br><img src="아프리카/BI.gif" width="150" height="90"></a></li>
+      <li><a href="#">부르키나파소<br><img src="아프리카/BF.gif" width="150" height="90"></a></li>
+      <li><a href="#">상투메프린시페<br><img src="아프리카/ST.gif" width="150" height="90"></a></li>
+      <li><a href="#">세네갈<br><img src="아프리카/SN.gif" width="150" height="90"></a></li>
+      <li><a href="#">세이셸<br><img src="아프리카/SC.gif" width="150" height="90"></a></li>
+      <li><a href="#">소말리아<br><img src="아프리카/SO.gif" width="150" height="90"></a></li>
+      <li><a href="#">수단<br><img src="아프리카/SD.gif" width="150" height="90"></a></li>
+      <li><a href="#">시에라리온<br><img src="아프리카/SL.gif" width="150" height="90"></a></li>
+      <li><a href="#">앙골라<br><img src="아프리카/AO.gif" width="150" height="90"></a></li>
+      <li><a href="#">에리트레아<br><img src="아프리카/ER.gif" width="150" height="90"></a></li>
+      <li><a href="#">에스와티니<br><img src="아프리카/SZ.gif" width="150" height="90"></a></li>
+      <li><a href="#">에티오피아<br><img src="아프리카/ET.gif" width="150" height="90"></a></li>
+      <li><a href="#">우간다<br><img src="아프리카/UG.gif" width="150" height="90"></a></li>
+      <li><a href="#">잠비아<br><img src="아프리카/ZM.gif" width="150" height="90"></a></li>
+      <li><a href="#">적도기니<br><img src="아프리카/GQ.gif" width="150" height="90"></a></li>
+      <li><a href="#">중앙아프리카<br><img src="아프리카/CF.gif" width="150" height="90"></a></li>
+      <li><a href="#">지부티<br><img src="아프리카/DJ.gif" width="150" height="90"></a></li>
+      <li><a href="#">짐바브웨<br><img src="아프리카/ZW.gif" width="150" height="90"></a></li>
+      <li><a href="#">차드<br><img src="아프리카/TD.gif" width="150" height="90"></a></li>
+      <li><a  id="modal_btn" href="#">카메룬<br><img src="아프리카/CM.gif" width="150" height="90"></a></li>
+      <li><a href="#">카보베르데<br><img src="아프리카/CV.gif" width="150" height="90"></a></li>
+      <li><a href="#">케냐<br><img src="아프리카/KE.png" width="150" height="90"></a></li>
+      <li><a href="#">코모로<br><img src="아프리카/KM.gif" width="150" height="90"></a></li>
+      <li><a href="#">코트디부아르<br><img src="아프리카/CI.gif" width="150" height="90"></a></li>
+      <li><a href="#">콩고공화국<br><img src="아프리카/CG.gif" width="150" height="90"></a></li>
+      <li><a href="#">콩고민주공화국<br><img src="아프리카/CD.gif" width="150" height="90"></a></li>
+      <li><a href="#">탄자니아<br><img src="아프리카/TZ.gif" width="150" height="90"></a></li>
+      <li><a href="#">토고<br><img src="아프리카/TG.gif" width="150" height="90"></a></li>
+      <li><a href="#">레바논<br><img src="아프리카/LB.gif" width="150" height="90"></a></li>
+      <li><a href="#">리비아<br><img src="아프리카/LY.gif" width="150" height="90"></a></li>
+      <li><a href="#">모로코<br><img src="아프리카/MA.gif" width="150" height="90"></a></li>
+      <li><a href="#">모리티니아 이슬람<br><img src="아프리카/MR.gif" width="150" height="90"></a></li>
+      <li><a href="#">바레인<br><img src="아프리카/BH.gif" width="150" height="90"></a></li>
+      <li><a href="#">사우디아리비아<br><img src="아프리카/SA.gif" width="150" height="90"></a></li>
+      <li><a href="#">시리아<br><img src="아프리카/SY.gif" width="150" height="90"></a></li>
+      <li><a href="#">아랍에미리트<br><img src="아프리카/AE.gif" width="150" height="90"></a></li>
+      <li><a href="#">알제리<br><img src="아프리카/DZ.gif" width="150" height="90"></a></li>
+      <li><a href="#">예멘<br><img src="아프리카/YE.gif" width="150" height="90"></a></li>
+      <li><a href="#">오만<br><img src="아프리카/OM.gif" width="150" height="90"></a></li>
+      <li><a href="#">요르단<br><img src="아프리카/JO.gif" width="150" height="90"></a></li>
+      <li><a href="#">이라크<br><img src="아프리카/IQ.gif" width="150" height="90"></a></li>
+      <li><a href="#">이란<br><img src="아프리카/IR.gif" width="150" height="90"></a></li>
+      <li><a href="#">이스라엘<br><img src="아프리카/IL.gif" width="150" height="90"></a></li>
+      <li><a href="#">이집트<br><img src="아프리카/EG.gif" width="150" height="90"></a></li>
+      <li><a href="#">카타르<br><img src="아프리카/QA.gif" width="150" height="90"></a></li>
+      <li><a href="#">쿠웨이트<br><img src="아프리카/KW.gif" width="150" height="90"></a></li>
+      <li><a href="#">튀니지<br><img src="아프리카/TN.gif" width="150" height="90"></a></li>
+      <li><a href="#">팔레스타인<br><img src="아프리카/PS.gif" width="150" height="90"></a></li>
+    </ul>
+  </div>
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+window.onload = function() {
+ 
+ function onClick() {
+     document.querySelector('.modal_wrap').style.display ='block';
+     document.querySelector('.black_bg').style.display ='block';
+ }   
+ function offClick() {
+     document.querySelector('.modal_wrap').style.display ='none';
+     document.querySelector('.black_bg').style.display ='none';
+ }
+
+ document.getElementById('modal_btn').addEventListener('click', onClick);
+ document.querySelector('.modal_close').addEventListener('click', offClick);
+};
+  </script>
+<body style="background-color:transparent">
+  <button type="button" onclick="location.href='eu.html' "class="Eu" ><img src="EU.png" width="500" height="380"></button>
+  <button type="button" class="Africa" ><img src="AFRICA.png" width="591" height="443"></button>
+  <button type="button" onclick="location.href='asia.html' "class="Asia" ><img src="ASIA.png" width="800" height="650"></button>
+  <button type="button" onclick="location.href='na.html' "class="Na" ><img src="NA.png" width="600" height="480"></button>
+  <button type="button" onclick="location.href='sa.html' " class="Sa" ><img src="SA.png" width="500" height="380"></button>
+  <button type="button" onclick="location.href='oc.html' "class="Oc" ><img src="OC.png" width="400" height="280"></button>
+  <div class="black_bg"></div>
+  <div class="modal_wrap">
+      <div class="modal_close"><a href="#"></a></div>
+      <div><img src="au.gif" width="800" height="500"></div>
+  </div>
+   
+</body>
+</html>
